@@ -6,8 +6,9 @@
         <div *ngIf="cardForm.controls.name.errors.required">
             Value is required.
         </div>
-        <div *ngIf="cardForm.controls.name.errors.minLength">
-            Value has to be at least 3 characters long.
+        <div *ngIf="cardForm.controls.name.errors.minlength">
+            Value is {{ cardForm.controls.name.errors.minlength.actualLength }} has to be at least
+            {{cardForm.controls.name.errors.minlength.requiredLength}} characters long.
         </div>
     </ng-container>
 
